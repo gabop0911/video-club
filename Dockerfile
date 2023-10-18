@@ -1,8 +1,10 @@
-FROM node:alpine
+FROM node
 WORKDIR /app
-COPY . .
+COPY package*.json ./
 RUN npm install
-EXPOSE 6969
-CMD PORT=6969 npm start
+COPY ..
+EXPOSE 90
+CMD PORT=90 mysql://root:YAnAFJU3AIRunUXxNdt0@containers-us-west-68.railway.app:7036/railway npm start
 
+#CMD ["npm", "start"]
 #CMD ["npm", "start"]
