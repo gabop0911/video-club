@@ -16,13 +16,11 @@ const copyModel = require('./models/copy');
     3) Contraseña base de datos
     4) Objeto de configuracion ORM
 */
-const sequelize = new Sequelize('video_club', 'fuan', 'awuitadeuwu!1', {
-        host: 'videoclub.mysql.database.azure.com', // db_mysql, localhost
-        dialect: 'mysql',
-        retry: {
-            max: 1000
-        }
-        });
+const sequelize = new Sequelize('railway', 'root', 'YAnAFJU3AIRunUXxNdt0', {
+    host: 'containers-us-west-68.railway.app',
+    port: 7036, // Puerto proporcionado por Railway
+    dialect: 'mysql'
+});
 
 const User = userModel(sequelize, Sequelize);
 const Director = directorModel(sequelize, Sequelize);
